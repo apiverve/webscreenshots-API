@@ -1,0 +1,32 @@
+{
+  "name": "@apiverve/webscreenshots",
+  "version": "1.1.5",
+  "description": "Web Screenshots is a simple tool for capturing screenshots of web pages. It returns an image screenshot of the web page provided.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/webscreenshots-API.git"
+  },
+  "keywords": [
+    "web screenshots","web screenshots api","web screenshots tool","web screenshots software","web screenshots service"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/webscreenshots-API/issues"
+  },
+  "homepage": "https://apiverve.com/marketplace/api/webscreenshots?utm_source=npm",
+  "devDependencies": {
+    "mocha": "^10.7.3",
+    "chai": "^5.1.1",
+    "dotenv": "^16.4.5"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "promise": "^8.3.0",
+    "axios": "1.7.7"
+  }
+}
