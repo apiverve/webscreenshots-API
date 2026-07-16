@@ -26,18 +26,18 @@ namespace APIVerve.API.WebsiteScreenshot
         /// The width of the screenshot in pixels (e.g., 1920). Must be between 100 and 3840
         /// </summary>
         [JsonProperty("width")]
-        public string Width { get; set; }
+        public double? Width { get; set; }
 
         /// <summary>
         /// The height of the screenshot in pixels (e.g., 1080).  Must be between 100 and 3840
         /// </summary>
         [JsonProperty("height")]
-        public string Height { get; set; }
+        public double? Height { get; set; }
 
         /// <summary>
         /// Whether to capture the full page screenshot (true or false)
         /// </summary>
         [JsonProperty("fullpage")]
-        public string Fullpage { get; set; }
+        public bool? Fullpage { get; set; }
     }
 }
