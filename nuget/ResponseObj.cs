@@ -25,29 +25,44 @@ namespace APIVerve.API.WebsiteScreenshot
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("width")]
-        public long Width { get; set; }
+        public long? Width { get; set; }
 
         [JsonProperty("height")]
-        public long Height { get; set; }
+        public long? Height { get; set; }
 
         [JsonProperty("scaleFactor")]
-        public long ScaleFactor { get; set; }
+        public long? ScaleFactor { get; set; }
 
         [JsonProperty("imageName")]
         public string ImageName { get; set; }
 
         [JsonProperty("expires")]
-        public long Expires { get; set; }
+        public long? Expires { get; set; }
 
         [JsonProperty("url")]
         public Uri Url { get; set; }
 
         [JsonProperty("downloadURL")]
         public Uri DownloadUrl { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
