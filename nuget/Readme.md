@@ -51,7 +51,7 @@ Here's a simple example to get you started quickly:
 
 ```csharp
 using System;
-using APIVerve;
+using APIVerve.API.WebsiteScreenshot;
 
 class Program
 {
@@ -60,7 +60,7 @@ class Program
         // Initialize the API client
         var apiClient = new WebsiteScreenshotAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
+        var queryOptions = new WebsiteScreenshotQueryOptions {
     url = "https://ebay.com/",
     type = "png",
     width = 1024,
@@ -120,7 +120,7 @@ The modern async/await pattern provides the best performance and code readabilit
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.WebsiteScreenshot;
 
 public class Example
 {
@@ -128,7 +128,7 @@ public class Example
     {
         var apiClient = new WebsiteScreenshotAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
+        var queryOptions = new WebsiteScreenshotQueryOptions {
     url = "https://ebay.com/",
     type = "png",
     width = 1024,
@@ -156,7 +156,7 @@ If you need to use synchronous code, you can use the `Execute` method:
 
 ```csharp
 using System;
-using APIVerve;
+using APIVerve.API.WebsiteScreenshot;
 
 public class Example
 {
@@ -164,7 +164,7 @@ public class Example
     {
         var apiClient = new WebsiteScreenshotAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
+        var queryOptions = new WebsiteScreenshotQueryOptions {
     url = "https://ebay.com/",
     type = "png",
     width = 1024,
@@ -197,7 +197,7 @@ The API client provides comprehensive error handling. Here are some examples:
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.WebsiteScreenshot;
 
 public class Example
 {
@@ -205,7 +205,7 @@ public class Example
     {
         var apiClient = new WebsiteScreenshotAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
+        var queryOptions = new WebsiteScreenshotQueryOptions {
     url = "https://ebay.com/",
     type = "png",
     width = 1024,
@@ -253,7 +253,7 @@ public class Example
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.WebsiteScreenshot;
 
 public class Example
 {
@@ -265,7 +265,7 @@ public class Example
         apiClient.SetMaxRetries(3);        // Retry up to 3 times (default: 0, max: 3)
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
-        var queryOptions = new QueryOptions {
+        var queryOptions = new WebsiteScreenshotQueryOptions {
     url = "https://ebay.com/",
     type = "png",
     width = 1024,
@@ -310,7 +310,7 @@ var apiClient = new WebsiteScreenshotAPIClient("[YOUR_API_KEY]");
 apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
-var queryOptions = new QueryOptions {
+var queryOptions = new WebsiteScreenshotQueryOptions {
     url = "https://ebay.com/",
     type = "png",
     width = 1024,
@@ -340,7 +340,7 @@ apiClient.SetLogger(message =>
     Console.WriteLine($"[LOG] {DateTime.Now:yyyy-MM-dd HH:mm:ss} - {message}");
 });
 
-var queryOptions = new QueryOptions {
+var queryOptions = new WebsiteScreenshotQueryOptions {
     url = "https://ebay.com/",
     type = "png",
     width = 1024,
@@ -362,7 +362,7 @@ var apiClient = new WebsiteScreenshotAPIClient("[YOUR_API_KEY]");
 apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3)
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
-var queryOptions = new QueryOptions {
+var queryOptions = new WebsiteScreenshotQueryOptions {
     url = "https://ebay.com/",
     type = "png",
     width = 1024,
@@ -378,7 +378,7 @@ var response = await apiClient.ExecuteAsync(queryOptions);
 The API client implements `IDisposable` for proper resource cleanup:
 
 ```csharp
-var queryOptions = new QueryOptions {
+var queryOptions = new WebsiteScreenshotQueryOptions {
     url = "https://ebay.com/",
     type = "png",
     width = 1024,
@@ -406,10 +406,10 @@ using (var apiClient = new WebsiteScreenshotAPIClient("[YOUR_API_KEY]"))
     "width": 1024,
     "height": 600,
     "scaleFactor": 1,
-    "imageName": "78bdb087-756b-4107-83e1-82fd40171ed1.png",
-    "expires": 1725356395837,
+    "imageName": "77072426-6af8-45c2-93dd-d7013d2c765e.png",
+    "expires": 1766097105719,
     "url": "https://ebay.com/",
-    "downloadURL": "https://storage.googleapis.com/apiverve-helpers.appspot.com/webscreenshots/78bdb087-756b-4107-83e1-82fd40171ed1.png?GoogleAccessId=1089020767582-compute%40developer.gserviceaccount.com&Expires=1725356395&Signature=jqAuoBhrbsSqs61blsFdnXEU35QOanhFnL0FN2d82cDDTXAUWonuRURUjyyhmABe02dVD3sMpvQDh0V39ROFcukPFASdIhr4HdWnKl743JLx03jrW%2FJ2baK3lZCZemPkS%2F61VqcHV1YB5XsxqsDNNkQ8QL8xlzUslHUgjuVKsorDCpBL5iFPSLo0l5DO3wvZ6UudJJP11j1MAnRmWQC7%2FkUBc7AP4akQvm6N7lftFkx8z6%2FptdxBt60w1XR6Ixoy6Vl31tvd6UjyWhjmF8JbujRSRYXmh0vjTNZBp5BX7xUntQUSMXhQf%2Bj3bXq7ZcsfMAAtqonqbzC6SBZgzSu2kA%3D%3D"
+    "downloadURL": "https://storage.googleapis.com/apiverve-helpers.appspot.com/webscreenshots/77072426-6af8-45c2-93dd-d7013d2c765e.png?GoogleAccessId=1089020767582-compute%40developer.gserviceaccount.com&Expires=1766097105&Signature=uZKa777XpeVnlwOZG7Uhjs%2BNkPzkEuiV4Wug2%2B%2BAHcPovRZ3iVjZEX%2FZhp7gnADXI6au5q0ggPwweoOFJeMCdk9zod6aZo4hlUDe1DsJf0oao4rh3tGUl5wPeudXLp7Y%2F3zVflup9Mp255LY6%2B2JdU0auOHdPnEYLDCvf705X9C%2BflmWQZKh7QKi74gvU8pqsP6Zc7SfJJsv5kmhP8SkO7TBZKBU6pAr2mNHKpKgB5mtfCRLbyPYcxawSGlTuyIyRXffWbkfHdDl6pquPX9J%2Fp5uGYM4jTrqrrrR1MPAOfkD7d9V5juqe5A7VvWmhiAyCMGDO%2BeqUO%2BSe6t9php0vA%3D%3D"
   }
 }
 ```
